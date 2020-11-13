@@ -115,7 +115,6 @@ class Discriminator(nn.Module):
             image (tensor): a flattened image tensor with dimension (im_chan)
         """
         disc_pred = self.disc(image)
-        print(f"\n\n\nType of disc pred: {type(disc_pred)}\n\n\n")
         return disc_pred.view(len(disc_pred), -1)
 
 
